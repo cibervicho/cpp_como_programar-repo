@@ -17,7 +17,7 @@ int main (void) {
     cin >> num2;
     cout << endl;
 
-    cout << "Suma: \t\t"       << num1 << " + " << num2 << " = " << (num1 + num2) << endl;
+    cout << "Suma: \t\t"     << num1 << " + " << num2 << " = " << (num1 + num2) << endl;
     cout << "Producto: \t"   << num1 << " x " << num2 << " = " << (num1 * num2) << endl;
     cout << "Diferencia: \t" << num1 << " - " << num2 << " = " << (num1 - num2) << endl;
     cout << "Cociente: \t"   << num1 << " / " << num2 << " = " << (num1 / num2) << endl;
