@@ -9,17 +9,17 @@ using namespace std;
 int main (void)
 {
     cout << endl << "Printing with 8 output statements:" << endl;
-    cout << "\t********" << endl;
-    cout << "\t********" << endl;
-    cout << "\t********" << endl;
-    cout << "\t********" << endl;
-    cout << "\t********" << endl;
-    cout << "\t********" << endl;
-    cout << "\t********" << endl;
-    cout << "\t********" << endl;
+    cout << "\t* * * * * * * *" << endl;
+    cout << "\t * * * * * * * *" << endl;
+    cout << "\t* * * * * * * *" << endl;
+    cout << "\t * * * * * * * *" << endl;
+    cout << "\t* * * * * * * *" << endl;
+    cout << "\t * * * * * * * *" << endl;
+    cout << "\t* * * * * * * *" << endl;
+    cout << "\t * * * * * * * *" << endl;
 
     cout << endl << "Printing with 1 output statement:" << endl;
-    cout << "\t********\n\t********\n\t********\n\t********\n\t********\n\t********\n\t********\n\t********" << endl;
+    cout << "\t* * * * * * * *\n\t * * * * * * * *\n\t* * * * * * * *\n\t * * * * * * * *\n\t* * * * * * * *\n\t * * * * * * * *\n\t* * * * * * * *\n\t * * * * * * * *" << endl;
 
     return 0;
 }
