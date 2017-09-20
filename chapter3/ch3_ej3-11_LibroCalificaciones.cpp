@@ -7,9 +7,10 @@ using namespace std;
 
 // El constructor inicializa nombreCurso con la cadena que se suministra como argumento
 LibroCalificaciones::LibroCalificaciones(string nombre, string instructor) 
+    : nombreInstructor(instructor)
 {
     establecerNombreCurso(nombre); // valida y almacena NombreCurso
-    establecerNombreInstructor(instructor); // almacena NombreInstructor
+    //establecerNombreInstructor(instructor); // almacena NombreInstructor
 } // Fin del constructor de LibroCalificaciones
 
 // Funcion para establecer el nombre del curso;
@@ -49,7 +50,7 @@ string LibroCalificaciones::obtenerNombreInstructor() const
 void LibroCalificaciones::mostrarMensaje() const
 {
     // Llama a obtenerNombreCurso para obtener el nombreCurso
-    cout << "Bienvenido al libro de calificaciones para\n" << obtenerNombreCurso()
+    cout << "\nBienvenido al libro de calificaciones para\n" << obtenerNombreCurso()
          << "!" << std::endl;
     cout << "Este curso es presentado por: " << obtenerNombreInstructor() << endl;
 } // Fin de la funcion mostrarMensaje

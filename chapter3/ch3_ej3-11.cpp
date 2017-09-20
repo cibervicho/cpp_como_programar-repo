@@ -24,7 +24,6 @@ int main(void)
     cout << "\nel nombre del curso de libroCalificaciones1 es: " << libroCalificaciones1.obtenerNombreCurso()
          << "\nel nombre del curso de libroCalificaciones2 es: " << libroCalificaciones2.obtenerNombreCurso() << endl;
 
-    cout << endl;
     libroCalificaciones1.mostrarMensaje();
     libroCalificaciones2.mostrarMensaje();
 } // fin de main
