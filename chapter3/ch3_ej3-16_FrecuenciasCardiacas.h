@@ -20,9 +20,12 @@ class FrecuenciasCardiacas
 private:
     std::string nombre;
     std::string apellido;
-    int dia;
-    int mes;
-    int anio;
+    int dia;  //Dia de nacimiento
+    int mes;  //Mes de nacimiento
+    int anio; //Anio de nacimiento
+    int diaActual;  //Dia en curso
+    int mesActual;  //Mes en curso
+    int anioActual; //Anio en curso
 public:
     FrecuenciasCardiacas(std::string, std::string, int, int, int);
 
@@ -31,12 +34,18 @@ public:
     void establecerDia(int);
     void establecerMes(int);
     void establecerAnio(int);
+    void establecerDiaActual(int);
+    void establecerMesActual(int);
+    void establecerAnioActual(int);
 
     std::string obtenerNombre() const;
-    std::string obtenerApellid() const;
+    std::string obtenerApellido() const;
     int obtenerDia() const;
     int obtenerMes() const;
     int obtenerAnio() const;
+    int obtenerDiaActual() const;
+    int obtenerMesActual() const;
+    int obtenerAnioActual() const;
 
     //std::string mostrarFecha() const; //Formato: dd/mm/AAAA
     int obtenerEdad() const; //Obtiene edad de la persona en anios.
