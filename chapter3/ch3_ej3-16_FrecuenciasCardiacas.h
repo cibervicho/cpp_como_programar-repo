@@ -50,5 +50,5 @@ public:
     //std::string mostrarFecha() const; //Formato: dd/mm/AAAA
     int obtenerEdad() const; //Obtiene edad de la persona en anios.
     int obtenerFrecuenciaCardiacaMaxima() const;
-    int obtenerFrecuenciaCardiacaEsperada() const;
+    std::string obtenerFrecuenciaCardiacaEsperada() const;
 };

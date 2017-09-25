@@ -100,7 +100,6 @@ int FrecuenciasCardiacas::obtenerAnioActual() const
 }
 int FrecuenciasCardiacas::obtenerEdad() const
 {
-    //TODO: Desarrollar
     int edad = 0;
 
     if (mesActual > mes)
@@ -112,11 +111,18 @@ int FrecuenciasCardiacas::obtenerEdad() const
 }
 int FrecuenciasCardiacas::obtenerFrecuenciaCardiacaMaxima() const
 {
-    //TODO: Desarrollar
-    return 0;
+    return (220 - obtenerEdad());
 }
-int FrecuenciasCardiacas::obtenerFrecuenciaCardiacaEsperada() const
+string FrecuenciasCardiacas::obtenerFrecuenciaCardiacaEsperada() const
 {
-    //TODO: Desarrollar
-    return 0;
+    int fc50 = 0;
+    int fc85 = 0;
+    int fcProm = 0;
+    int fcMax = obtenerFrecuenciaCardiacaMaxima();
+
+    fc50 = (fcMax * 50) / 100; //50% de FC Maxima
+    fc85 = (fcMax * 85) / 100; //80% de FC Maxima
+    fcProm = (fc50 + fc85) / 2;//Promedio de las 2 frecuencias
+    cout << "50%\tProm\t85%\tMax\n" << fc50 << "\t" << fcProm << "\t" << fc85 << "\t" << fcMax << endl;
+    return "";
 }

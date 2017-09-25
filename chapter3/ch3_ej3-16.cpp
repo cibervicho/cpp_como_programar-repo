@@ -26,7 +26,7 @@ int main (void)
     cout << "Fecha de Nac: " << fc1.obtenerDia() << "/" << fc1.obtenerMes() << "/" << fc1.obtenerAnio() << endl;
     cout << "Fecha de Hoy: " << fc1.obtenerDiaActual() << "/" << fc1.obtenerMesActual() << "/" << fc1.obtenerAnioActual() << endl;
     cout << "Frecuencia Cardiaca Maxima: " << fc1.obtenerFrecuenciaCardiacaMaxima() << endl;
-    cout << "Frecuencia Cardiaca Esperada: " << fc1.obtenerFrecuenciaCardiacaEsperada() << endl;
+    cout << "Frecuencia Cardiaca Esperada:" << endl; fc1.obtenerFrecuenciaCardiacaEsperada();
 
     return 0;
 }
