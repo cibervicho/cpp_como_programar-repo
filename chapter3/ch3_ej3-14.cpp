@@ -6,8 +6,15 @@ using namespace std;
 
 int main (void)
 {
-    Empleado empleado1("David", "Maldonado", 1000);
-    Empleado empleado2("Karla", "Andrade", 2000);
+    //Inicializacion tradicional
+    //Comando de compilacion: 'g++ ch3_ej3-14.cpp ch3_ej3-14_Empleado.cpp'
+    //Empleado empleado1("David", "Maldonado", 1000);
+    //Empleado empleado2("Karla", "Andrade", 2000);
+
+    //Inicializacion de C++11.
+    //Comando de compilacion: 'g++ -std=c++11 ch3_ej3-14.cpp ch3_ej3-14_Empleado.cpp'
+    Empleado empleado1{"David", "Maldonado", 1000};
+    Empleado empleado2 = {"Karla", "Andrade", 2000};
 
     cout << "Salario anual de " << empleado1.obtenerNombre() << " " << empleado1.obtenerApellido()
          << " - $" << empleado1.obtenerSalarioAnual() << endl;
