@@ -27,6 +27,7 @@ int main (void)
         else
             salario = horas * tarifa + (tarifa / 2);
 
+        cout << setprecision(2) << fixed;
         cout << "El salario es: " << salario << endl << endl;
 
         cout << "Introduzca las horas laboradas (o -1 para salir): "; cin >> horas;
