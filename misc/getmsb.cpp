@@ -26,23 +26,13 @@ int getmsb (unsigned long long x)
 
 long long getMask(int rangeSize)
 {
-    //long long testBase = 0;
-    //long long exclMask = (~(testBase + rangeSize - 1) | (1 << getmsb(rangeSize-1)));
-    //long long exclMask = ((1 << getmsb(rangeSize-1)) * -1);
-
     long long testBase = 0x05000000;
     long long rangeEnd = (testBase + rangeSize);
     long long exclMask = rangeEnd * -1;
 
-    //cout << "   + rangeEnd: 0x" << hex << rangeEnd << endl;
-    //cout << "   + exclMask: 0x" << hex << exclMask << endl;
-    //cout << "   + getmsb(rangeEnd - 1): " << dec << getmsb(rangeEnd - 1) << endl;
     exclMask |= (1 << (getmsb(rangeEnd - 1)));
-    //cout << "   + exclMask: 0x" << hex << exclMask << endl;
     exclMask |= range_en;
-    //cout << "   + exclMask: 0x" << hex << exclMask << endl;
     exclMask &= range_mask;
-    //cout << "   + exclMask: 0x" << hex << exclMask << endl;
 
     return exclMask;
 }
@@ -73,3 +63,4 @@ int main (void)
 
     return 0;
 }
+
