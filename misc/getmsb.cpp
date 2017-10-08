@@ -20,6 +20,14 @@ int getmsb (unsigned long long x)
     return r;
 }
 
+long long getMask(int rangeSize)
+{
+    //long long testBase = 0;
+    //long long exclMask = (~(testBase + rangeSize - 1) | (1 << getmsb(rangeSize-1)));
+    long long exclMask = ((1 << getmsb(rangeSize-1)) * -1);
+    return exclMask;
+}
+
 int main (void)
 {
     unsigned char      c0  = 0;
@@ -39,7 +47,10 @@ int main (void)
     cout << "  " << i   << "\t\t\tMSB: " << getmsb(i) << endl;
     cout << "  " << ui  << "\t\t\tMSB: " << getmsb(ui) << endl;
     cout << "  " << ul  << "\t\tMSB: " << getmsb(ul) << endl;
-    cout << "  " << ull << "\tMSB: " << getmsb(ull) << endl;
+    cout << "  " << ull << "\tMSB: " << getmsb(ull) << endl << endl;
+
+    i = 1048576;
+    cout << "Mask of '" << i << "': " << getMask(i) << endl << endl;
 
     return 0;
 }
