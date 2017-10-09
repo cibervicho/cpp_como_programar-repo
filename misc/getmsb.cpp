@@ -8,9 +8,13 @@
 //
 // Source: https://stackoverflow.com/questions/2589096/find-most-significant-bit-left-most-that-is-set-in-a-bit-array
 #include <iostream>
+#include <iomanip>
 #include <stdio.h>
 
 using namespace std;
+
+const long long range_mask = 0x0000007FFFFFF800;
+const long long range_en = 0x800;
 
 int getmsb (unsigned long long x)
 {
@@ -24,7 +28,22 @@ long long getMask(int rangeSize)
 {
     //long long testBase = 0;
     //long long exclMask = (~(testBase + rangeSize - 1) | (1 << getmsb(rangeSize-1)));
-    long long exclMask = ((1 << getmsb(rangeSize-1)) * -1);
+    //long long exclMask = ((1 << getmsb(rangeSize-1)) * -1);
+
+    long long testBase = 0x05000000;
+    long long rangeEnd = (testBase + rangeSize);
+    long long exclMask = rangeEnd * -1;
+
+    //cout << "   + rangeEnd: 0x" << hex << rangeEnd << endl;
+    //cout << "   + exclMask: 0x" << hex << exclMask << endl;
+    //cout << "   + getmsb(rangeEnd - 1): " << dec << getmsb(rangeEnd - 1) << endl;
+    exclMask |= (1 << (getmsb(rangeEnd - 1)));
+    //cout << "   + exclMask: 0x" << hex << exclMask << endl;
+    exclMask |= range_en;
+    //cout << "   + exclMask: 0x" << hex << exclMask << endl;
+    exclMask &= range_mask;
+    //cout << "   + exclMask: 0x" << hex << exclMask << endl;
+
     return exclMask;
 }
 
@@ -50,7 +69,7 @@ int main (void)
     cout << "  " << ull << "\tMSB: " << getmsb(ull) << endl << endl;
 
     i = 1048576;
-    cout << "Mask of '" << i << "': " << getMask(i) << endl << endl;
+    cout << "Mask of '0x" << hex << i << "' (" << dec << i << "): 0x" << hex << getMask(i) << endl << endl;
 
     return 0;
 }
