@@ -42,10 +42,7 @@ int main(void)
         {
             e *= n--; // calculando factorial
         }
-        cout << "potencia:  " << x << endl;
-        cout << "factorial: " << e << endl;
         e_bkp += x/e;
-        cout << x << "/" << e << " = " << e_bkp << endl;
         e = 1;     // reseteamos el valor de e para calcular el nuevo factorial
         --n_bkp;   // restamos iteracion para controlar sumas
         n = n_bkp; // reseteamos el valor de 'n' para calcular el nuevo factorial
